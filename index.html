@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SchoolBridge - Modern Teacher Tools">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+  <title>SchoolBridge</title>
+</head>
+<body>
+  <div class="app">
+    
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h1>SchoolBridge</h1>
+      </div>
+      <ul class="nav-links">
+        <li data-page="dashboard">
+          <span class="icon">📊</span>
+          <span>Dashboard</span>
+        </li>
+        <li data-page="progress">
+          <span class="icon">📈</span>
+          <span>Progress</span>
+        </li>
+        <li data-page="attendance">
+          <span class="icon">📝</span>
+          <span>Attendance</span>
+        </li>
+        <li data-page="activities">
+          <span class="icon">📅</span>
+          <span>Activities</span>
+        </li>
+        <li data-page="statistics">
+          <span class="icon">📊</span>
+          <span>Statistics</span>
+        </li>
+        <li data-page="staff">
+          <span class="icon">👥</span>
+          <span>Staff Room</span>
+        </li>
+        <li data-page="documents" class="active">
+          <span class="icon">📄</span>
+          <span>Documents</span>
+        </li>
+      </ul>
+      <div class="sidebar-footer">
+        <div class="user-info">
+          <div class="user-avatar">NA</div>
+          <div class="user-details">
+            <div class="user-name">Nurbol Aidarbayev</div>
+            <div class="user-role">Teacher</div>
+          </div>
+        </div>
+        <div class="dark-mode-toggle">
+          <label class="toggle-switch">
+            <input type="checkbox" id="dark-mode-toggle" onclick="toggleDarkMode()">
+            <span class="toggle-slider"></span>
+          </label>
+          <span class="toggle-text">Mode</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+      <header class="header">
+        <h1 id="page-title">Documents</h1>
+        <div class="header-actions">
+          <div class="search-bar">
+            <input type="search" placeholder="Search...">
+            <button class="search-button">🔍</button>
+          </div>
+          <div class="notifications">
+            <span class="notification-icon">🔔</span>
+            <span class="notification-count">3</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="page-content">
+        <!-- Dashboard Page -->
+        <div class="page" id="dashboard">
+          <div class="dashboard-container">
+            <div class="stats-row">
+              <div class="card stat-card">
+                <h3>Students Present</h3>
+                <div class="stat-value">26/30</div>
+                <div class="stat-progress">
+                  <div class="progress-bar" style="width: 87%;"></div>
+                </div>
+                <div class="stat-change positive">+2 from yesterday</div>
+              </div>
+              
+              <div class="card stat-card">
+                <h3>Assignments</h3>
+                <div class="stat-value">18/25</div>
+                <div class="stat-progress">
+                  <div class="progress-bar" style="width: 72%;"></div>
+                </div>
+                <div class="stat-change positive">+5 this week</div>
+              </div>
+              
+              <div class="card stat-card">
+                <h3>Average Grade</h3>
+                <div class="stat-value">B+</div>
+                <div class="stat-secondary">85%</div>
+                <div class="stat-change positive">+3% from last month</div>
+              </div>
+              
+              <div class="card stat-card">
+                <h3>Parent Meetings</h3>
+                <div class="stat-value">5</div>
+                <div class="stat-secondary">Scheduled this week</div>
+                <div class="stat-change neutral">Same as last week</div>
+              </div>
+            </div>
+            
+           
+            
+            <div class="widgets-row">
+              <div class="card">
+                <h3>Recent Announcements</h3>
+                <div class="announcement-list">
+                  <div class="announcement">
+                    <div class="announcement-header">
+                      <div class="announcement-title">Field Trip Permission</div>
+                      <div class="announcement-date">May 12, 2025</div>
+                    </div>
+                    <div class="announcement-content">
+                      Please remind students to return signed permission slips by Friday.
+                    </div>
+                  </div>
+                  
+                  <div class="announcement">
+                    <div class="announcement-header">
+                      <div class="announcement-title">Science Project Due Date</div>
+                      <div class="announcement-date">May 10, 2025</div>
+                    </div>
+                    <div class="announcement-content">
+                      Science projects deadline extended to next Wednesday.
+                    </div>
+                  </div>
+                  
+                  <div class="announcement">
+                    <div class="announcement-header">
+                      <div class="announcement-title">Parent-Teacher Conference</div>
+                      <div class="announcement-date">May 8, 2025</div>
+                    </div>
+                    <div class="announcement-content">
+                      Conferences will be held on May 20-21. Sign-up sheet in office.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <h3>Upcoming Events</h3>
+                <div class="events-list">
+                  <div class="event">
+                    <div class="event-date">
+                      <div class="event-month">May</div>
+                      <div class="event-day">15</div>
+                    </div>
+                    <div class="event-details">
+                      <div class="event-title">Quiz Physics</div>
+                      <div class="event-time">9:00 AM - 12:00 PM</div>
+                      <div class="event-location">H204</div>
+                    </div>
+                  </div>
+                  
+                  <div class="event">
+                    <div class="event-date">
+                      <div class="event-month">May</div>
+                      <div class="event-day">18</div>
+                    </div>
+                    <div class="event-details">
+                      <div class="event-title">Science Fair</div>
+                      <div class="event-time">1:00 PM - 4:00 PM</div>
+                      <div class="event-location">School Auditorium</div>
+                    </div>
+                  </div>
+                  
+                  <div class="event">
+                    <div class="event-date">
+                      <div class="event-month">May</div>
+                      <div class="event-day">20</div>
+                    </div>
+                    <div class="event-details">
+                      <div class="event-title">Parent-Teacher Conference Day 1</div>
+                      <div class="event-time">3:00 PM - 7:00 PM</div>
+                      <div class="event-location">Classrooms</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Progress Page -->
+        <div class="page" id="progress">
+          <div class="progress-container">
+            <div class="card filter-card">
+              <div class="filters">
+                <div class="filter-group">
+                  <label for="class-filter">Class:</label>
+                  <select id="class-filter">
+                    <option value="all">All Classes</option>
+                    <option value="math7a">Mathematics </option>
+                    <option value="science7a">Science </option>
+                    <option value="english7a">English </option>
+                  </select>
+                </div>
+                
+                <div class="filter-group">
+                  <label for="student-filter">Student:</label>
+                  <select id="student-filter">
+                    <option value="all">All Students</option>
+                    <option value="adams-jane">Nurbol Aidarbayev</option>
+                    <option value="brown-michael">Nazerke Makhsatbekkyzy</option>
+                    <option value="chen-lisa">Nazarali Aitjanov</option>
+                    <option value="davis-james">Bekesh Bekesh</option>
+                  </select>
+                </div>
+                
+                <div class="filter-group">
+                  <label for="period-filter">Period:</label>
+                  <select id="period-filter">
+                    <option value="term1">Term 1</option>
+                    <option value="term2">Term 2</option>
+                    <option value="term3">Term 3</option>
+                    <option value="full-year" selected>Full Year</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="progress-charts-container">
+              <div class="card chart-card">
+                <h3>Academic Progress</h3>
+                <div class="chart-placeholder" data-chart-type="line"></div>
+              </div>
+              
+              <div class="card chart-card">
+                <h3>Skills Development</h3>
+                <div class="chart-placeholder" data-chart-type="bar"></div>
+              </div>
+            </div>
+            
+            <div class="card detailed-progress">
+              <h3>Detailed Progress Report</h3>
+              
+              <div class="progress-table-container">
+                <table class="progress-table">
+                  <thead>
+                    <tr>
+                      <th>Subject</th>
+                      <th>Assignments</th>
+                      <th>Tests</th>
+                      <th>Participation</th>
+                      <th>Current Grade</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Mathematics</td>
+                      <td>92%</td>
+                      <td>88%</td>
+                      <td>95%</td>
+                      <td>A-</td>
+                      <td><span class="trend positive">↑</span></td>
+                    </tr>
+                    <tr>
+                      <td>Science</td>
+                      <td>85%</td>
+                      <td>90%</td>
+                      <td>88%</td>
+                      <td>B+</td>
+                      <td><span class="trend positive">↑</span></td>
+                    </tr>
+                    <tr>
+                      <td>English</td>
+                      <td>90%</td>
+                      <td>85%</td>
+                      <td>92%</td>
+                      <td>B+</td>
+                      <td><span class="trend neutral">→</span></td>
+                    </tr>
+                    <tr>
+                      <td>History</td>
+                      <td>82%</td>
+                      <td>78%</td>
+                      <td>85%</td>
+                      <td>B</td>
+                      <td><span class="trend negative">↓</span></td>
+                    </tr>
+                    <tr>
+                      <td>Art</td>
+                      <td>95%</td>
+                      <td>88%</td>
+                      <td>98%</td>
+                      <td>A</td>
+                      <td><span class="trend positive">↑</span></td>
+                    </tr>
+                    <tr>
+                      <td>Physical Education</td>
+                      <td>90%</td>
+                      <td>92%</td>
+                      <td>95%</td>
+                      <td>A-</td>
+                      <td><span class="trend positive">↑</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Attendance Page -->
+        <div class="page" id="attendance">
+          <div class="attendance-container">
+            <div class="card filter-card">
+              <div class="filters">
+                <div class="filter-group">
+                  <label for="attendance-class">Class:</label>
+                  <select id="attendance-class">
+                    <option value="math7a">Mathematics </option>
+                    <option value="science7a">Science </option>
+                    <option value="english7a">English </option>
+                  </select>
+                </div>
+                
+                <div class="filter-group">
+                  <label for="attendance-date">Date:</label>
+                  <input type="date" id="attendance-date" value="2025-05-13">
+                </div>
+                
+                <div class="filter-group">
+                  <label for="attendance-period">Period:</label>
+                  <select id="attendance-period">
+                    <option value="1">Period 1</option>
+                    <option value="2">Period 2</option>
+                    <option value="3">Period 3</option>
+                    <option value="4">Period 4</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card attendance-card">
+              <div class="attendance-header">
+                <h3>Attendance Record</h3>
+                <div class="attendance-summary">
+                  <span>Present: <strong>26</strong></span>
+                  <span>Absent: <strong>3</strong></span>
+                  <span>Late: <strong>1</strong></span>
+                  <span>Total: <strong>30</strong></span>
+                </div>
+              </div>
+              
+              <div class="attendance-table-container">
+                <table class="attendance-table">
+                  <thead>
+                    <tr>
+                      <th>Student</th>
+                      <th>Status</th>
+                      <th>Time</th>
+                      <th>Note</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Nazerke Makhsatbekkyzy</td>
+                      <td>
+                        <select class="status-select present">
+                          <option value="present" selected>Present</option>
+                          <option value="absent">Absent</option>
+                          <option value="late">Late</option>
+                          <option value="excused">Excused</option>
+                        </select>
+                      </td>
+                      <td>8:30 AM</td>
+                      <td><input type="text" placeholder="Add a note..."></td>
+                    </tr>
+                    <tr>
+                      <td>Nurbol Aidarbayev</td>
+                      <td>
+                        <select class="status-select present">
+                          <option value="present" selected>Present</option>
+                          <option value="absent">Absent</option>
+                          <option value="late">Late</option>
+                          <option value="excused">Excused</option>
+                        </select>
+                      </td>
+                      <td>8:28 AM</td>
+                      <td><input type="text" placeholder="Add a note..."></td>
+                    </tr>
+                    <tr>
+                      <td>Nurkhan Oryngaliuly</td>
+                      <td>
+                        <select class="status-select late">
+                          <option value="present">Present</option>
+                          <option value="absent">Absent</option>
+                          <option value="late" selected>Late</option>
+                          <option value="excused">Excused</option>
+                        </select>
+                      </td>
+                      <td>8:42 AM</td>
+                      <td><input type="text" value="Bus delay" placeholder="Add a note..."></td>
+                    </tr>
+                    <tr>
+                      <td>Bekesh Bekesh</td>
+                      <td>
+                        <select class="status-select absent">
+                          <option value="present">Present</option>
+                          <option value="absent" selected>Absent</option>
+                          <option value="late">Late</option>
+                          <option value="excused">Excused</option>
+                        </select>
+                      </td>
+                      <td>-</td>
+                      <td><input type="text" value="Parent called - sick" placeholder="Add a note..."></td>
+                    </tr>
+                    <tr>
+                      <td>Nazarali Aitjanov</td>
+                      <td>
+                        <select class="status-select present">
+                          <option value="present" selected>Present</option>
+                          <option value="absent">Absent</option>
+                          <option value="late">Late</option>
+                          <option value="excused">Excused</option>
+                        </select>
+                      </td>
+                      <td>8:25 AM</td>
+                      <td><input type="text" placeholder="Add a note..."></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              
+              <div class="attendance-actions">
+                <button class="btn btn-primary save-button">Save Attendance</button>
+                <button class="btn btn-secondary">Send Notifications</button>
+                <button class="btn btn-secondary">Print Report</button>
+              </div>
+            </div>
+            
+            <div class="attendance-history-container">
+              <div class="card">
+                <h3>Attendance History</h3>
+                <div class="chart-placeholder" data-chart-type="line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Activities Page -->
+        <div class="page" id="activities">
+          <div class="activities-container">
+            <div class="activities-header">
+              <div class="card calendar-controls">
+                <div class="calendar-navigation">
+                  <button class="btn btn-secondary prev-month">◀ Previous</button>
+                  <h3 class="calendar-header">May 2025</h3>
+                  <button class="btn btn-secondary next-month">Next ▶</button>
+                </div>
+                <div class="calendar-actions">
+                  <button class="btn btn-secondary">Today</button>
+                  <select class="view-select">
+                    <option value="month">Month</option>
+                    <option value="week">Week</option>
+                    <option value="day">Day</option>
+                  </select>
+                </div>
+              </div>
+              <div class="actions-card">
+                <button class="btn btn-primary add-event-button">Add New Event</button>
+              </div>
+            </div>
+            
+            <div class="calendar-container">
+              <div class="card calendar">
+                <div class="calendar-weekdays">
+                  <div class="weekday">Sunday</div>
+                  <div class="weekday">Monday</div>
+                  <div class="weekday">Tuesday</div>
+                  <div class="weekday">Wednesday</div>
+                  <div class="weekday">Thursday</div>
+                  <div class="weekday">Friday</div>
+                  <div class="weekday">Saturday</div>
+                </div>
+                <div class="calendar-grid">
+                  <!-- Previous month days -->
+                  <div class="calendar-day not-current-month">28</div>
+                  <div class="calendar-day not-current-month">29</div>
+                  <div class="calendar-day not-current-month">30</div>
+                  <!-- Current month days -->
+                  <div class="calendar-day">1</div>
+                  <div class="calendar-day">2</div>
+                  <div class="calendar-day">3</div>
+                  <div class="calendar-day">4</div>
+                  
+                  <div class="calendar-day">5</div>
+                  <div class="calendar-day">6</div>
+                  <div class="calendar-day">7</div>
+                  <div class="calendar-day">8</div>
+                  <div class="calendar-day">9</div>
+                  <div class="calendar-day">10</div>
+                  <div class="calendar-day">11</div>
+                  
+                  <div class="calendar-day">12</div>
+                  <div class="calendar-day today">13
+                    <div class="calendar-event">Math Test</div>
+                    <div class="calendar-event">Staff Meeting</div>
+                  </div>
+                  <div class="calendar-day">14</div>
+                  <div class="calendar-day">15
+                    <div class="calendar-event important">Math Competition</div>
+                  </div>
+                  <div class="calendar-day">16</div>
+                  <div class="calendar-day">17</div>
+                  <div class="calendar-day">18
+                    <div class="calendar-event important">Science Fair</div>
+                  </div>
+                  
+                  <div class="calendar-day">19</div>
+                  <div class="calendar-day">20
+                    <div class="calendar-event">Parent-Teacher Conferences</div>
+                  </div>
+                  <div class="calendar-day">21
+                    <div class="calendar-event">Parent-Teacher Conferences</div>
+                  </div>
+                  <div class="calendar-day">22</div>
+                  <div class="calendar-day">23</div>
+                  <div class="calendar-day">24</div>
+                  <div class="calendar-day">25</div>
+                  
+                  <div class="calendar-day">26</div>
+                  <div class="calendar-day">27</div>
+                  <div class="calendar-day">28
+                    <div class="calendar-event">Field Trip</div>
+                  </div>
+                  <div class="calendar-day">29</div>
+                  <div class="calendar-day">30</div>
+                  <div class="calendar-day">31</div>
+                  <div class="calendar-day not-current-month">1</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="upcoming-events">
+              <div class="card">
+                <h3>Upcoming Events</h3>
+                <div class="events-list">
+                  <div class="event">
+                    <div class="event-date">
+                      <div class="event-month">May</div>
+                      <div class="event-day">13</div>
+                    </div>
+                    <div class="event-details">
+                      <div class="event-title">Math Test</div>
+                      <div class="event-time">10:00 AM - 11:30 AM</div>
+                      <div class="event-location">Room 201</div>
+                    </div>
+                    <div class="event-actions">
+                      <button class="btn btn-secondary">Edit</button>
+                    </div>
+                  </div>
+                  
+                  <div class="event">
+                    <div class="event-date">
+                      <div class="event-month">May</div>
+                      <div class="event-day">13</div>
+                    </div>
+                    <div class="event-details">
+                      <div class="event-title">Staff Meeting</div>
+                      <div class="event-time">3:30 PM - 4:30 PM</div>
+                      <div class="event-location">Conference Room</div>
+                    </div>
+                    <div class="event-actions">
+                      <button class="btn btn-secondary">Edit</button>
+                    </div>
+                  </div>
+                  
+                  <div class="event">
+                    <div class="event-date">
+                      <div class="event-month">May</div>
+                      <div class="event-day">15</div>
+                    </div>
+                    <div class="event-details">
+                      <div class="event-title">Quiz Physics</div>
+                      <div class="event-time">9:00 AM - 12:00 PM</div>
+                      <div class="event-location">H204</div>
+                    </div>
+                    <div class="event-actions">
+                      <button class="btn btn-secondary">Edit</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Statistics Page -->
+        <div class="page" id="statistics">
+          <div class="statistics-container">
+            <div class="card filter-card">
+              <div class="filters">
+                <div class="filter-group">
+                  <label for="stat-period">Period:</label>
+                  <select id="stat-period">
+                    <option value="term1">Term 1</option>
+                    <option value="term2">Term 2</option>
+                    <option value="term3">Term 3</option>
+                    <option value="year" selected>Full Year</option>
+                  </select>
+                </div>
+                
+                <div class="filter-group">
+                  <label for="stat-class">Class:</label>
+                  <select id="stat-class">
+                    <option value="all">All Classes</option>
+                    <option value="math7a">Mathematics</option>
+                    <option value="science7a">Science</option>
+                    <option value="english7a">English</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="stats-overview">
+              <div class="stats-row">
+                <div class="card stat-card">
+                  <h3>Class Average</h3>
+                  <div class="stat-value">B+</div>
+                  <div class="stat-secondary">85%</div>
+                  <div class="stat-change positive">+3% from previous term</div>
+                </div>
+                
+                <div class="card stat-card">
+                  <h3>Attendance Rate</h3>
+                  <div class="stat-value">94%</div>
+                  <div class="stat-progress">
+                    <div class="progress-bar" style="width: 94%;"></div>
+                  </div>
+                  <div class="stat-change positive">+2% from previous term</div>
+                </div>
+                
+                <div class="card stat-card">
+                  <h3>Homework Completion</h3>
+                  <div class="stat-value">88%</div>
+                  <div class="stat-progress">
+                    <div class="progress-bar" style="width: 88%;"></div>
+                  </div>
+                  <div class="stat-change negative">-3% from previous term</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="detailed-stats">
+              <div class="card chart-card">
+                <h3>Grade Distribution</h3>
+                <div class="chart-placeholder" data-chart-type="pie"></div>
+              </div>
+              
+              <div class="card chart-card">
+                <h3>Subject Performance</h3>
+                <div class="chart-placeholder" data-chart-type="bar"></div>
+              </div>
+            </div>
+            
+            <div class="card stats-table">
+              <h3>Performance by Student</h3>
+              <div class="table-container">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Student</th>
+                      <th>Average Grade</th>
+                      <th>Attendance</th>
+                      <th>Homework</th>
+                      <th>Quiz</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Nazerke Makhsatbekkyzy</td>
+                      <td>A-</td>
+                      <td>98%</td>
+                      <td>95%</td>
+                      <td>90%</td>
+                    </tr>
+                    <tr>
+                      <td>Nurbol Aidarbayev</td>
+                      <td>B+</td>
+                      <td>95%</td>
+                      <td>85%</td>
+                      <td>80%</td>
+                    </tr>
+                    <tr>
+                      <td>Nurkhan Oryngaliuly</td>
+                      <td>A</td>
+                      <td>93%</td>
+                      <td>98%</td>
+                      <td>95%</td>
+                    </tr>
+                    <tr>
+                      <td>Bekesh Bekesh</td>
+                      <td>C+</td>
+                      <td>85%</td>
+                      <td>70%</td>
+                      <td>75%</td>
+                    </tr>
+                    <tr>
+                      <td>Nazarali Aitjanov</td>
+                      <td>B</td>
+                      <td>92%</td>
+                      <td>88%</td>
+                      <td>85%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Staff Room Page -->
+        <div class="page" id="staff">
+          <div class="staff-container">
+            <div class="staff-columns">
+              <div class="staff-column">
+                <div class="card announcements-card">
+                  <h3>Staff Announcements</h3>
+                  <div class="announcement-list">
+                    <div class="announcement">
+                      <div class="announcement-header">
+                        <div class="announcement-title">End of Year Procedures</div>
+                        <div class="announcement-date">May 12, 2025</div>
+                      </div>
+                      <div class="announcement-author">From:Mustafa Abdulbakiogly </div>
+                      <div class="announcement-content">
+                        Please submit all grades by June 15th. End-of-year checklist will be distributed next week.
+                      </div>
+                    </div>
+                    
+                    <div class="announcement">
+                      <div class="announcement-header">
+                        <div class="announcement-title">Midterm Exam</div>
+                        <div class="announcement-date">May 10, 2025</div>
+                      </div>
+                      <div class="announcement-author">From: Samat Maxutov</div>
+                      <div class="announcement-content">
+                        Reminder: We're writing the midterm exam for PED445 on Wednesday.
+                      </div>
+                    </div>
+                    
+                    <div class="announcement">
+                      <div class="announcement-header">
+                        <div class="announcement-title">Staff Appreciation Lunch</div>
+                        <div class="announcement-date">May 8, 2025</div>
+                      </div>
+                      <div class="announcement-author">From: Staff Committee</div>
+                      <div class="announcement-content">
+                        Staff appreciation lunch will be held on Friday, May 20th in the cafeteria at 11:30 AM.
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="announcement-actions">
+                    <button class="btn btn-secondary">View All Announcements</button>
+                    <button class="btn btn-secondary">Post Announcement</button>
+                  </div>
+                </div>
+                
+                <div class="card staff-directory-card">
+                  <h3>Staff Directory</h3>
+                  <div class="directory-search">
+                    <input type="text" placeholder="Search staff...">
+                  </div>
+                  <div class="staff-list">
+                    <div class="staff-member">
+                      <div class="staff-avatar">SM</div>
+                      <div class="staff-info">
+                        <div class="staff-name">Samat Maxutov</div>
+                        <div class="staff-position">Teacher</div>
+                        <div class="staff-contact">samat.maxutov@sdu.edu.kz</div>
+                      </div>
+                    </div>
+                    
+                    <div class="staff-member">
+                      <div class="staff-avatar">AK</div>
+                      <div class="staff-info">
+                        <div class="staff-name">2203017023</div>
+                        <div class="staff-position">student</div>
+                        <div class="staff-contact">220317023@stu.sdu.edu.kz</div>
+                      </div>
+                    </div>
+                    
+                    <div class="staff-member">
+                      <div class="staff-avatar">AR</div>
+                      <div class="staff-info">
+                        <div class="staff-name">Aksholpan Rassil</div>
+                        <div class="staff-position">Math Department Head</div>
+                        <div class="staff-contact">aksholpan.rassil@sdu.edu.kz</div>
+                      </div>
+                    </div>
+                    
+                    <div class="staff-member">
+                      <div class="staff-avatar">AA</div>
+                      <div class="staff-info">
+                        <div class="staff-name">Ardak Artykbayeva</div>
+                        <div class="staff-position">Informatics Teacher</div>
+                        <div class="staff-contact">ardak.artykbayeva@sdu.edu.kz</div>
+                      </div>
+                    </div>
+                    
+                    <div class="staff-member">
+                      <div class="staff-avatar">JT</div>
+                      <div class="staff-info">
+                        <div class="staff-name">John Teacher</div>
+                        <div class="staff-position">English Teacher</div>
+                        <div class="staff-contact">jteacher@sdu.edu.kz</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="staff-column">
+                <div class="card chat-card">
+                  <h3>Staff Chat</h3>
+                  <div class="chat-messages">
+                    <div class="message">
+                      <div class="message-avatar">BB</div>
+                      <div class="message-content">
+                        <div class="message-header">
+                          <span class="message-author">Bekesh Bekesh</span>
+                          <span class="message-time">9:30 AM</span>
+                        </div>
+                        <div class="message-text">
+                          A practical lesson is taking place in room G108. You are welcome to join.
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="message">
+                      <div class="message-avatar">SM</div>
+                      <div class="message-content">
+                        <div class="message-header">
+                          <span class="message-author">Samat Maxutov</span>
+                          <span class="message-time">9:32 AM</span>
+                        </div>
+                        <div class="message-text">
+                          There will be a midterm in room A1 at 13:00. If you are available, please feel free to come and help as a proctor
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="message">
+                      <div class="message-avatar">NA</div>
+                      <div class="message-content">
+                        <div class="message-header">
+                          <span class="message-author">Nazarali Atjanov</span>
+                          <span class="message-time">9:33 AM</span>
+                        </div>
+                        <div class="message-text">
+                          Agaylar osy Friday let's play football in Altyn Ayul at 20:00.
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="message">
+                      <div class="message-avatar">AB</div>
+                      <div class="message-content">
+                        <div class="message-header">
+                          <span class="message-author">Azatzhan Baitekov</span>
+                          <span class="message-time">9:35 AM</span>
+                        </div>
+                        <div class="message-text">
+                          Kettik kettik.
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="message">
+                      <div class="message-avatar">NM</div>
+                      <div class="message-content">
+                        <div class="message-header">
+                          <span class="message-author">Nazerke Makhsatbekkyzy</span>
+                          <span class="message-time">9:40 AM</span>
+                        </div>
+                        <div class="message-text">
+                          At 13:00 in H214, students will show their final web project. You can join and see what they made. Good luck to all students!
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="chat-input-container">
+                    <div class="chat-input">
+                      <input type="text" placeholder="Type a message...">
+                    </div>
+                    <button class="send-button">Send</button>
+                  </div>
+                </div>
+                
+                <div class="card resources-card">
+                  <h3>Staff Resources</h3>
+                  <div class="resources-list">
+                    <div class="resource">
+                      <div class="resource-icon">📄</div>
+                      <div class="resource-details">
+                        <div class="resource-title">School Policies Handbook</div>
+                        <div class="resource-meta">PDF • 2.4 MB • Updated May 5, 2025</div>
+                      </div>
+                    </div>
+                    
+                    <div class="resource">
+                      <div class="resource-icon">📊</div>
+                      <div class="resource-details">
+                        <div class="resource-title">Grade Reporting Templates</div>
+                        <div class="resource-meta">Excel • 1.8 MB • Updated April 28, 2025</div>
+                      </div>
+                    </div>
+                    
+                    <div class="resource">
+                      <div class="resource-icon">📅</div>
+                      <div class="resource-details">
+                        <div class="resource-title">School Calendar 2025-2026</div>
+                        <div class="resource-meta">PDF • 1.2 MB • Updated May 1, 2025</div>
+                      </div>
+                    </div>
+                    
+                    <div class="resource">
+                      <div class="resource-icon">📋</div>
+                      <div class="resource-details">
+                        <div class="resource-title">Curriculum Planning Guide</div>
+                        <div class="resource-meta">Word • 3.5 MB • Updated April 15, 2025</div>
+                      </div>
+                    </div>
+                    
+                    <div class="resource">
+                      <div class="resource-icon">📝</div>
+                      <div class="resource-details">
+                        <div class="resource-title">Lesson Plan Templates</div>
+                        <div class="resource-meta">Word • 1.5 MB • Updated April 10, 2025</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="resources-actions">
+                    <button class="btn btn-secondary">View All Resources</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Documents Page -->
+        <div class="page active" id="documents">
+          <div class="documents-container">
+            <div class="documents-sidebar">
+              <div class="card">
+                <h2>Document Library</h2>
+                <div class="document-search">
+                  <input type="text" id="doc-search" placeholder="Search documents...">
+                </div>
+                <button class="upload-button btn btn-primary">Upload New Document</button>
+                <div class="document-categories">
+                  <button class="btn btn-secondary active">Recent Documents</button>
+                  <button class="btn btn-secondary">Shared with Me</button>
+                  <button class="btn btn-secondary">Important</button>
+                  <button class="btn btn-secondary">Archived</button>
+                </div>
+                <div class="storage-info">
+                  <h3>Storage</h3>
+                  <div class="storage-bar-container">
+                    <div class="storage-text">
+                      <span>250MB used</span>
+                      <span>1GB</span>
+                    </div>
+                    <div class="storage-bar">
+                      <div class="storage-progress" style="width: 25%;"></div>
+                    </div>
+                    <p class="storage-note">25% of storage used</p>
+                  </div>
+                  <button class="btn btn-secondary">Manage Storage</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="documents-main">
+              <div class="documents-tabs">
+                <button class="tab-button active" data-tab="list">List View</button>
+                <button class="tab-button" data-tab="grid">Grid View</button>
+                <div class="document-count">5 documents</div>
+              </div>
+
+              <div class="tab-content active" id="list-view">
+                <div class="card documents-table">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Size</th>
+                        <th>Modified</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody id="documents-list">
+                      <!-- Documents will be inserted here by JavaScript -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="tab-content" id="grid-view">
+                <div class="documents-grid" id="documents-grid">
+                  <!-- Grid documents will be inserted here by JavaScript -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Upload Modal -->
+    <div id="upload-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Upload Document</h2>
+          <span class="close-modal">&times;</span>
+        </div>
+        <div class="modal-body">
+          <form id="upload-form">
+            <div class="form-group">
+              <label for="file">File</label>
+              <input type="file" id="file">
+            </div>
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input type="text" id="title">
+            </div>
+            <div class="form-group">
+              <label for="description">Description</label>
+              <input type="text" id="description">
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Upload</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+      <div class="toast-content">
+        <span class="toast-title">Success</span>
+        <span class="toast-message">Document uploaded successfully!</span>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
